@@ -1,0 +1,30 @@
+Logged User
+
+1. riproduzione contenuto
+	a.Utente inizia a guardare un contenuto
+		I. utente può mettere in pausa/riproduzione
+		II. utente può cambiare la lingua
+		III. utente può aggiungere/rimuovere sottotitoli
+		IV. utente può alzare/abbassare il volume
+		V. utente può mandare avanti/indietro il momento
+		VI se serie può visualizzare lista episodi
+	b.Utente vuole altre info sul contenuto
+		I. può aggiungere alla lista
+		II. può riprodurre il content
+		III. riceve info sul contenuto come trama/cast
+		IV. può scegliere altri contenuti simili
+		VI se serie può avere la lista degli episodi divisi in stagioni
+
+	c. utente può cercare tramite nome il contenuto 
+
+	
+
+
+
+	 
+
+
+2 gestisci profili 
+
+
+3 Modifica account
