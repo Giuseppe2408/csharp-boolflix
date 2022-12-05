@@ -13,12 +13,6 @@ namespace csharp_boolflix.Controllers
             tvShowRepository = _tvShowRepository;
         }
 
-        public IActionResult Index()
-        {
-            List<TvShow> tvShowList = tvShowRepository.All();
-            return View(tvShowList);
-        }
-
         public IActionResult Create()
         {
             return View();

@@ -3,38 +3,52 @@
 
  <div class="container">
         <div class="row justify-content-between">
-        @if (Model.Films.Count == 0 && Model.TvShows.Count == 0)
-        {
-            <h1>Non ci sono Contenuti al momento</h1>
-
-        }
-
-        else
-        {
-            @foreach (Film film in Model.Films)
+            @if (Model.Films.Count == 0 && Model.TvShows.Count == 0)
             {
-                <div class="card col-3" style="width: 18rem;">
-                    <img class="card-img-top" style="height: 200px;" src="@film.Image" alt="Card image cap">
-                    <div class="card-body">
-                        <h1>@film.Title</h1>
-                        <p class="card-text">@film.Description</p>
-                        <h5 class="card-title">@film.Duration</h5>
-                        <span>@film.ReleaseDate.ToString("gg/mm/yyyy")</span>
-                    </div>
-                </div>        
+                <h1>Non ci sono Contenuti al momento</h1>
+
             }
-            @foreach (TvShow tvShow in Model.TvShows)
+
+            else
             {
-                <div class="card col-3" style="width: 18rem;">
-                    <img class="card-img-top" style="height: 200px;" src="@tvShow.Image" alt="Card image cap">
-                    <div class="card-body">
-                        <h1>@tvShow.Title</h1>
-                        <p class="card-text">@tvShow.Description</p>
+                @foreach (Film film in Model.Films)
+                {
+                    <div class="card col-3" style="width: 18rem;">
+                        <img class="card-img-top" style="height: 200px;" src="@film.Image" alt="Card image cap">
+                        <div class="card-body">
+                            <h1>@film.Title</h1>
+                            <p class="card-text">@film.Description</p>
+                            <h5 class="card-title">@film.Duration</h5>
+                            <span>@film.ReleaseDate.ToString("dd/MM/yyyy")</span>
+                        </div>
+                    </div>        
+                }
+                @foreach (TvShow tvShow in Model.TvShows)
+                {
+                    <div class="card col-3" style="width: 18rem;">
+                        <img class="card-img-top" style="height: 200px;" src="@tvShow.Image" alt="Card image cap">
+                        <div class="card-body">
+                            <h1>@tvShow.Title</h1>
+                            <p class="card-text">@tvShow.Description</p>
                                 
-                        <span>@tvShow.ReleaseDate.ToString("gg/mm/yyyy")</span>
-                    </div>
-                </div>        
+                            <span>@tvShow.ReleaseDate.ToString("dd/MM/yyyy")</span>
+                        </div>
+                    </div>        
+                }
             }
-        }
+            <a
+                asp-controller="Film"
+                asp-action="Create"
+                
+
+                class="btn btn-primary my-5">Crea Film
+            </a>
+            <a
+                asp-controller="TvShow"
+                asp-action="Create"
+
+
+                class="btn btn-success">Crea SerieTv
+            </a>
         </div>
 </div>
