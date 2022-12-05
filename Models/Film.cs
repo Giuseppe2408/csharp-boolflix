@@ -10,6 +10,6 @@ namespace csharp_boolflix.Models
 
 
         [Range(1, 1000, ErrorMessage = "il numero deve essere positivo")]
-        public int Duration { get; set; }
+        public int? Duration { get; set; }
     }
 }

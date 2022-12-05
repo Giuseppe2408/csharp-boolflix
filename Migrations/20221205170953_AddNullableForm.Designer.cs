@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using csharp_boolflix.Areas.Identity.Data;
 
@@ -11,9 +12,11 @@ using csharp_boolflix.Areas.Identity.Data;
 namespace csharpboolflix.Migrations
 {
     [DbContext(typeof(NetflixDbContext))]
-    partial class NetflixDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221205170953_AddNullableForm")]
+    partial class AddNullableForm
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -378,7 +381,7 @@ namespace csharpboolflix.Migrations
                 {
                     b.HasBaseType("csharp_boolflix.Models.Media");
 
-                    b.Property<int?>("Duration")
+                    b.Property<int>("Duration")
                         .HasColumnType("int");
 
                     b.HasDiscriminator().HasValue("Film");

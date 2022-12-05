@@ -2,8 +2,8 @@
 {
     public class MediaForm
     {
-        List<Film> Films { get; set; }
+        public List<Film>? Films { get; set; }
 
-        List<TvShow> TvShows { get; set; }
+        public List<TvShow>? TvShows { get; set; }
     }
 }

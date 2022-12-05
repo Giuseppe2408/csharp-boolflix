@@ -12,16 +12,16 @@ namespace csharp_boolflix.Models.Repository.DbRepo
             db = _db;
         }
 
-        public List<Film> All()
+        public List<TvShow> All()
         {
-            List<Film> films = db.Films.ToList();
+            List<TvShow> tvShows = db.TvShows.ToList();
 
-            return films;
+            return tvShows;
         }
 
         public void Create(TvShow tvShow)
         {
-            db.Add(tvShow);
+            db.TvShows.Add(tvShow);
             db.SaveChanges();
         }
 

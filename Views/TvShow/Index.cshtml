@@ -1,0 +1,27 @@
+﻿@model List<TvShow>
+
+ <div class="container">
+        <div class="row justify-content-between">
+        @if (Model.Count == 0)
+        {
+                    <h1>Non ci sono film al momento</h1>
+
+        }
+
+        else
+        {
+            @foreach (TvShow tvShow in Model)
+            {
+                                <div class="card col-3" style="width: 18rem;">
+                                    <img class="card-img-top" style="height: 200px;" src="@tvShow.Image" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h1>@tvShow.Title</h1>
+                                        <p class="card-text">@tvShow.Description</p>
+                                        
+                                        <span>@tvShow.ReleaseDate.ToString("gg/mm/yyyy")</span>
+                                    </div>
+                                </div>        
+            }
+        }
+        </div>
+</div>

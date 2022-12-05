@@ -2,7 +2,7 @@
 {
     public interface ITvShowRepository
     {
-        List<Film> All();
+        List<TvShow> All();
         void Create(TvShow tvShow);
         void Delete(TvShow tvShow);
         void Update(TvShow tvShow);

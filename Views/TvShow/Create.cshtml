@@ -1,0 +1,27 @@
+﻿@model TvShow
+
+<form asp-controller="TvShow" asp-action="Create" method="post">
+    @Html.AntiForgeryToken()
+  <div class="form-group pb-3">
+    <label asp-for="Title"></label>
+    <input type="text" class="form-control" asp-for="Title" placeholder="Metti il nome">
+    <span class="text-danger" asp-validation-for="Title"></span>
+
+    <label asp-for="Image"></label>
+    <input type="text" class="form-control" asp-for="Image" placeholder="Metti url immagine">
+    <span class="text-danger" asp-validation-for="Image"></span>
+
+    <label asp-for="ReleaseDate"></label>
+    <input type="date" class="form-control" asp-for="ReleaseDate" placeholder="Metti url immagine">
+    <span class="text-danger" asp-validation-for="ReleaseDate"></span>
+
+    <label asp-for="Description"></label>
+    <textarea type="text" class="form-control" asp-for="Description" placeholder="Metti descrizione"></textarea>
+    <span class="text-danger" asp-validation-for="Description"></span>
+
+   @* <label asp-for="Duration"></label>
+    <input type="text" class="form-control" asp-for="Duration" placeholder="Metti la durata">
+    <span class="text-danger" asp-validation-for="Duration"></span>*@
+  </div>
+  <button type="submit" class="btn btn-success">Salva</button>
+</form>
