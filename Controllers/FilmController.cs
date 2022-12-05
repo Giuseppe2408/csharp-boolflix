@@ -26,6 +26,7 @@ namespace csharp_boolflix.Controllers
             return View();
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Create(Film film)
         {
             if (!ModelState.IsValid)

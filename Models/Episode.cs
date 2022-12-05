@@ -11,6 +11,6 @@
         //relazione 1 a molti tra stagioni e ep
         public int SeasonId { get; set; }
 
-        public Season Season { get; set; }
+        public Season? Season { get; set; }
     }
 }

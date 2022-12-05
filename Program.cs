@@ -12,7 +12,7 @@ builder.Services.AddDbContext<NetflixDbContext>(options =>
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<NetflixDbContext>();
 
-builder.Services.AddScoped<IFilmRepository, DbMediaRepository>();
+builder.Services.AddScoped<IFilmRepository, DbFilmRepository>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 

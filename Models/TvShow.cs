@@ -9,7 +9,7 @@ namespace csharp_boolflix.Models
         //eredita titolo e descrizione da media 
 
         //relazione con episodi
-        public List<Season> Seasons { get; set; }
+        public List<Season>? Seasons { get; set; }
 
       
     }

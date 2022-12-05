@@ -5,18 +5,20 @@ using Microsoft.EntityFrameworkCore;
 
 namespace csharp_boolflix.Models.Repository.DbRepo
 {
-    public class DbMediaRepository : IFilmRepository
+    public class DbFilmRepository : IFilmRepository
     {
         NetflixDbContext db;
 
-        public DbMediaRepository(NetflixDbContext _db)
+        public DbFilmRepository(NetflixDbContext _db)
         {
             db = _db;
         }
 
-        public List<Media> All()
+        public List<Film> All()
         {
-            return db.Films.ToList();
+            List<Film> films = db.Films.ToList();
+            
+            return films;
         }
 
         public void Create(Film film)

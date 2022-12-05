@@ -9,5 +9,7 @@
         public int TvShowId { get; set; }
 
         public TvShow TvShow { get; set; }
+
+        public List<Episode>? Episodes { get; set; }
     }
 }

@@ -8,6 +8,9 @@ namespace csharp_boolflix.Models
 
         public string Title { get; set; }
 
+        public string Image { get; set; }
+
+        public DateTime ReleaseDate { get; set; }
         
         public string Description { get; set; }
 
