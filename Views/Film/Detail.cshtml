@@ -1,0 +1,31 @@
+﻿@model Film
+
+ <div class="container">
+        <div class="row justify-content-between">
+       
+            <div class="card col-3" style="width: 18rem;">
+                <img class="card-img-top" style="height: 200px;" src="@Model.Image" alt="Card image cap">
+                <div class="card-body">
+                    <h1>@Model.Title</h1>
+                    <p class="card-text">@Model.Description</p>
+                    <h5 class="card-title">@Model.Duration</h5>
+                    <span>@Model.ReleaseDate.ToString("dd/MM/yyyy")</span>
+                </div>
+                <ul>
+                    <h3>Cast</h3>
+                    @foreach (Actor actor in Model.Actors) 
+                    {
+                        <li>@actor.Name @actor.Surname</li>
+                    }
+                </ul>
+                <ul>
+                    <h3>categorie</h3>
+                    @foreach(Category category in Model.Categories) 
+                    {
+                        <li>@category.Title</li>
+                    }
+                </ul>
+            </div>        
+              
+        </div>
+</div>

@@ -20,6 +20,12 @@
                             <p class="card-text">@film.Description</p>
                             <h5 class="card-title">@film.Duration</h5>
                             <span>@film.ReleaseDate.ToString("dd/MM/yyyy")</span>
+                            <a
+                                asp-controller="Film"
+                                asp-action="Detail"
+                                asp-route-id="@film.Id"
+                                class="btn btn-primary my-5">visualizza Film
+                            </a>    
                         </div>
                     </div>        
                 }

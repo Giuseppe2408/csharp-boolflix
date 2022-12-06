@@ -6,14 +6,18 @@ using csharp_boolflix.Models.Repository.DbRepo;
 
 
 var builder = WebApplication.CreateBuilder(args);
+//connessione db
 var connectionString = builder.Configuration.GetConnectionString("NetflixDbContextConnection");
 builder.Services.AddDbContext<NetflixDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<NetflixDbContext>();
 
+//varie injection
 builder.Services.AddScoped<IFilmRepository, DbFilmRepository>();
 builder.Services.AddScoped<ITvShowRepository, DbTvShowRepository>();
+builder.Services.AddScoped<ICategoryRepository, DbCategoryRepository>();
+builder.Services.AddScoped<IActorRepository, DbActorRepository>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 

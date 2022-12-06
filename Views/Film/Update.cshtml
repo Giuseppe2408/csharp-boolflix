@@ -1,7 +1,7 @@
 ﻿@using csharp_boolflix.Models.Form
 @model MediaForm;
 
-<form asp-controller="Film" asp-action="Create" method="post">
+<form asp-controller="Film" asp-action="Update" method="post">
     @Html.AntiForgeryToken()
   <div class="form-group pb-3">
     <label asp-for="Film.Title"></label>
